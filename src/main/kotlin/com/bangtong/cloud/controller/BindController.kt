@@ -57,7 +57,7 @@ class BindController {
 			order.boxId = (-1).toLong()
 			order.timeReceive = System.currentTimeMillis()
 			orderRepository.save(order)
-			boxIfoRepository!!.deleteBoxIfoByBoxId(order.boxId)
+			boxIfoRepository!!.deleteBoxIfoByBoxId(boxId)
 			return true
 		}
 		return false
