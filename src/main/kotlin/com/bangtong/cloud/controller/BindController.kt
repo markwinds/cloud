@@ -57,7 +57,7 @@ class BindController {
 			order.boxId = (-1).toLong()
 			order.timeReceive = System.currentTimeMillis()
 			orderRepository.save(order)
-			boxIfoRepository!!.deleteBoxIfoByBoxId(boxId)
+			deleteBoxIfo(boxId)
 			return true
 		}
 		return false
@@ -107,6 +107,13 @@ class BindController {
 			boxStatus = result.get()
 		}
 		return boxStatus
+	}
+
+	fun deleteBoxIfo(boxId: Long){
+		val list = boxIfoRepository!!.getBoxIfo(boxId)
+		for (b in list){
+			boxIfoRepository.delete(b)
+		}
 	}
 
 }

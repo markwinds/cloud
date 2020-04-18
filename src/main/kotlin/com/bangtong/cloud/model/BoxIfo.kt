@@ -1,5 +1,6 @@
 package com.bangtong.cloud.model
 
+import org.springframework.data.jpa.repository.Modifying
 import org.springframework.data.jpa.repository.Query
 import org.springframework.data.repository.CrudRepository
 import org.springframework.data.repository.query.Param
@@ -23,6 +24,6 @@ interface BoxIfoRepository: CrudRepository<BoxIfo, Long> {
 	@Query("SELECT * FROM box_ifo WHERE box_id=:boxId", nativeQuery = true)
 	fun getBoxIfo(@Param("boxId")boxId: Long):List<BoxIfo>
 
-	//@Query("DELETE FROM box_ifo WHERE box_id=:boxId", nativeQuery = true)
-	fun deleteBoxIfoByBoxId(@Param("boxId")boxId: Long)
+//	@Query("DELETE FROM box_ifo WHERE box_id=:boxId", nativeQuery = true)
+//	fun deleteBoxIfo(@Param("boxId")boxId: Long)
 }
