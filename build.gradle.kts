@@ -9,7 +9,7 @@ plugins {
 }
 
 group = "com.bangtong"
-version = "0.0.1"
+version = "3.0"
 java.sourceCompatibility = JavaVersion.VERSION_1_8
 
 repositories {
@@ -19,6 +19,8 @@ repositories {
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.springframework.boot:spring-boot-starter-integration")
+	implementation("org.springframework.integration:spring-integration-ip")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
