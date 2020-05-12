@@ -9,7 +9,7 @@ plugins {
 }
 
 group = "com.bangtong"
-version = "0.0.1"
+version = "2.3"
 java.sourceCompatibility = JavaVersion.VERSION_1_8
 
 repositories {
